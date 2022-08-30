@@ -1,8 +1,9 @@
-# How To Load Content Into A Databricks Workspace
+# How To Load Content Into A CoLab Workspace
 
-This article describes a few methods you can use to load content into your Databricks workspace.
+This article describes a few methods you can use to load content into your CoLab workspace.
 
 The content can consists of several types:
+
 - Notebooks
 - SQL Dashboards and its related queries
 - Data: tables and views
@@ -21,8 +22,17 @@ Notebooks contain a mix of code, narrative and explanations that are a great way
 2. You can also create your own DBC archive by exporting an existing notebook or folder from your Databricks workspace. Simply choose File --> Export from the notebook menu, or Export from the workspace folder menu
 3. Importing a DBC archive is equally simple. Just go to the workspace folder where you want to import and choose Import from the context menu
 
+
+The above method can be used to export field demos from the Field-eng workspace and import them into the Shared area of the CoLab workspace
+
 ##### Method 2: Use Git Repos
-Databricks supports git repositories from popular providers such as Github, Gitlab and Bitbucket. Create an empty repository on one of these services and load your notebooks into it. Or you may fork or clone an [existing repository](https://github.com/orgs/databricks/repositories) containing sample notebooks. Then, in your Databricks workspace, add the repository into the Repos section. You will need to configure Databricks with an access token from the service (eg. Github)
+Databricks supports git repositories from popular providers such as Github, Gitlab and Bitbucket. Create an empty repository on one of these services and load your notebooks into it. Or you may fork or clone an [existing repository](https://github.com/orgs/databricks/repositories) containing sample notebooks. Then, in your Databricks workspace, add the repository into the Repos section. You will need to configure Databricks with an access token from the service (eg. Github). 
+
+This method can be used to connect repositories for many solution accelerators, such as the following:
+
+1. [esg-scoring](https://github.com/databricks-industry-solutions/esg-scoring)
+2. [merchant-classification](https://github.com/databricks-industry-solutions/merchant-classification)
+3. [reg-reporting](https://github.com/databricks-industry-solutions/reg-reporting)
 
 ### SQL Dashboards and Queries
 
@@ -61,6 +71,7 @@ If you want to import dashboards and their underlying queries from another Datab
 ### Data: tables and views
 
 There are a few different ways to load data into your Databricks workspace:
+
 1. Copy files into DBFS using the databricks CLI tool
 2. [Mount a cloud storage bucket](https://docs.databricks.com/data/data-sources/aws/amazon-s3.html) (eg. S3) into DBFS
 3. Set up [instance profiles](https://docs.databricks.com/administration-guide/cloud-configurations/aws/instance-profiles.html) to allow secure access to cloud object storage
@@ -115,6 +126,6 @@ See this [KB article](https://kb.databricks.com/en_US/notebooks/access-s3-temp-s
 ### Delta Live Tables (DLT) Pipelines
 
 
-```python
+```
 
 ```
